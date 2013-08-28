@@ -9,6 +9,8 @@ end
 
 def get_scores
   response="q"
+  i=0
+  log_array=[]
   while response.downcase != "n"
 
     puts "What is team one's name?"
@@ -25,18 +27,23 @@ def get_scores
     puts""
     score_2 = gets.chomp.to_i
 
-    scores_hash={}
-    scores_hash[:team_1] = score_1
-    scores_hash[:team_2] = score_2
+    scores_array=[]
+    scores_array[0] = team_1
+    scores_array[1] = score_1
+    scores_array[2] = team_2
+    scores_array[3] = score_2
 
-    identify_winner(scores_hash, team_1, team_2)
+    log_array[i]<<scores_array
+    puts log_array
 
-    puts"would you like to get more game results?"
+    puts"would you like to enter more game results?"
     puts"(y/n)"
     puts""
+    i+=1
     response = gets.chomp
     if response == "n"
-      exit
+      # identify_winner(hash, team_1, team_2)
+      break
     end
   end
 

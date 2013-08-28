@@ -4,7 +4,64 @@
   <meta charset=utf-8 />
   <title></title>
   <style>
+    body{font-family: Verdana;}
 
+    h1{
+      text-align: center;
+      font-family: ayuma;
+      font-size: 100px;
+
+    }
+    h2{
+      font-size: 60px;
+      text-align: center;
+
+    }
+    h3{
+      font-size: 30px
+    }
+    h4{
+      text-align: center;
+    }
+    .tagline{
+      text-align: center;
+    }
+
+    img{
+      float:left;
+      padding-left: 10%;
+      padding-right: 15%;
+      border-right: 1px dotted black;
+      display:inline-block;
+    }
+    .benefits{
+      float:right;
+      padding-left:;
+      padding-right:10%;
+      display:inline-block;
+    }
+    .benefits_title{
+      text-align: center;
+    }
+    .instructions{
+      display: inline-block;
+      padding-top:10%;
+      position: relative;
+      left:20%;
+    }
+    .the_list{
+      padding-left:10%;
+    }
+    .floaters{
+      padding-top:5%;
+    }
+    .titular{
+      text-align: center;
+    }
+    @font-face{
+      font-family: ayuma;
+      src: url('/Users/Swannyyy/Dropbox/launchacademy/swerk/Assessment/Ayuma2yk\ 2.ttf');
+    }
 
   </style>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
@@ -13,39 +70,56 @@
   <![endif]-->
 </head>
 <body>
-  <h1>Kickball!! Greatest Sport ever</h1>
+  <h1>Kickball!! Greatest Sport EVER</h1>
 
-  <h2>Introducing the greatest innovation since the rubber kickball....</h2>
+  <h3>Introducing the greatest innovation since the rubber kickball....</h3>
 
 
-  <h4>The Kickball Score Tracker</h4>
+  <h2>The Kickball Score Tracker</h2>
   <p>Everyone knows the feeling... It's been a long hard day at the field. 12 hours of a Kickball round robin tournament. You're sweaty. Your beer belly groans for a cold one. The last thing you want to do is manually add up those scores figure out who won with pen and paper. What year is it? You want the beautiful UI of your zsh modified terminal to spit out the winner of the literally ten's of games that were played that day. And you want to lose any record of those outcomes. It was not a good day. The beer will help, but so will.... </p>
   <h4>THE KICKBALL SCORE TRACKER</h4>
-  <p>The greatest innovation since the invention of the rubber ball we all know and love.</p>
-  <img src="http://www.bernardhealth.com/Portals/131307/images/kickball1.jpg" alt="ball" height="10" width="10">
+  <p class="tagline">The greatest innovation since the invention of the rubber ball we all know and love.</p>
 
-  <p>The Benefits are many...</p>
-  <ul>
-    <li>No more hand cramps writing down scores</li>
-    <li>Watch youtube will you figure out who won</li>
-    <li>No staring at dirty lined paper</li>
-    <li>No holding pencils or pens. Who has been touching these?</li>
-    <li>Easy to follow instructions</li>
-    <li>Code so Dense, you wont bother with inspection, saving you precious hours</li>
-    <li>The ONLY one of its kind, guaranteed.</li>
-  </ul>
 
-  <p>It's easy to use as well:</p>
-  <dl>
-    <dt>Just run this easy to read code:</dt>
-      <dd>ruby  /Users/Swannyyy/Dropbox/launchacademy/swerk/Assessment/phase_4_kickball.rb</dd>
-    <dt>Follow prompt and enter info</dt>
-      <dd>Team 1, score, Team 2, score</dd>
-    <dt>Hit y for yes, n for no if:</dt>
-      <dd>You want to add more games</dd>
-    <dt>If you press 'n' for know</dt>
-      <dd>You'll get the winner for each game!</dd>
-  </dl>
+    <div class = "floaters">
+      <img src="http://www.bernardhealth.com/Portals/131307/images/kickball1.jpg" alt="ball" height="200" width="200">
+
+      <div class="benefits">
+        <p class="benefits_title">The Benefits are many...</p>
+        <ul class="the_list">
+          <li>No more hand cramps writing down scores</li>
+          <li>Watch youtube will you figure out who won</li>
+          <li>No staring at dirty lined paper</li>
+          <li>No holding pencils or pens. Who has been touching these?</li>
+          <li>Easy to follow instructions</li>
+          <li>Code so Dense, you wont bother with inspection, saving you precious hours</li>
+          <li>The ONLY one of its kind, guaranteed.</li>
+        </ul>
+    </div>
+  </div>
+  <div class="instructions">
+    <p class="titular">It's easy to use as well:</p>
+    <div >
+      <ul>
+        <li>Just run this easy to read code:</li>
+          <ul>
+            <li>ruby  /Users/Swannyyy/Dropbox/launchacademy/swerk/Assessment/phase_4_kickball.rb</li>
+          </ul>
+        <li>Follow prompt and enter info</li>
+        <ul>
+          <li>Team 1, score, Team 2, score</li>
+          </ul>
+        <li>Hit y for yes, n for no if:</li>
+        <ul>
+          <li>You want to add more games</li>
+          </ul>
+        <li>If you press 'n' for know</li>
+        <ul>
+          <li>You'll get the winner for each game!</li>
+        </ul>
+      </dl>
+    </div>
+  </div>
 
 
 </body>

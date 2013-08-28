@@ -1,14 +1,28 @@
-def identify_winner(hash, team_1, team_2)
- if hash[:team_1]>hash[:team_2]
-  puts"~~~~~~~~~~~#{team_1} wins!~~~~~~~~~~~~"
- else
-  puts"~~~~~~~~~~#{team_2} wins!~~~~~~~~~~~~~~"
-  puts""
- end
+def identify_winner(array)
+ m=0#team_1
+ i=1#score_1
+ v=2#team_2
+ z=3#score_2
+ h=0#Game num - 1
+ while array[h] != nil
+   if array[h][i]>array[h][z]
+    puts"~~~~ In Game #{h+1}, #{array[h][0]} won!~~~~~~~~~~~~"
+   else
+    puts"~~~~~In Game #{h+1}, #{array[h][2]} won!~~~~~~~~~~~~~~"
+    puts""
+   end
+   h+=1
+   # m+=4
+   # i+=4
+   # v+=4
+   # z+=4
+  end
 end
 
 def get_scores
   response="q"
+  i=0
+  log_array=[]
   while response.downcase != "n"
 
     puts "What is team one's name?"
@@ -24,19 +38,24 @@ def get_scores
     puts"What is team two's score?"
     puts""
     score_2 = gets.chomp.to_i
+    puts""
 
-    scores_hash={}
-    scores_hash[:team_1] = score_1
-    scores_hash[:team_2] = score_2
+    scores_array=[]
+    scores_array<< team_1
+    scores_array<< score_1
+    scores_array<< team_2
+    scores_array<< score_2
 
-    identify_winner(scores_hash, team_1, team_2)
+    log_array<<scores_array
 
-    puts"would you like to get more game results?"
+    puts"would you like to enter more game results?"
     puts"(y/n)"
     puts""
+    i+=1
     response = gets.chomp
     if response == "n"
-      exit
+      identify_winner(log_array)
+      break
     end
   end
 
